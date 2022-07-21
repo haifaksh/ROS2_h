@@ -1,0 +1,8 @@
+<?xml version='1.0' ?>
+<launch>
+  <!-- Publish URDF file in robot_description topic -->
+  <include file="$(find-pkg-share rmod3_description_pkg)/launch/rmod3_description.launch.py"/>
+  <!-- Read robot_description an dspawn in gazebo running sim -->
+  <include file="$(find-pkg-share rmod3_gazebo_pkg)/launch/start_world.launch.py"/>
+  <include file="$(find-pkg-share rmod3_controller_pkg)/launch/rmod3_controller.launch.py"/>
+</launch>
